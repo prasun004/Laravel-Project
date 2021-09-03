@@ -18,11 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/example/{first}/{second}',function ($first, $second) {
-$multi = $first * $second;
-return view('example', ['firstVal' => $first, 'secondVal' => '$second', 'multi' => $multi]);
-});
+// Route::get('/example/{first}/{second}',function ($first, $second) {
+// $multi = $first * $second;
+// return view('example', ['firstVal' => $first, 'secondVal' => '$second', 'multi' => $multi]);
+// });
 
 
-Route::get('/form',[ExampleController::class,'index']);
-
+Route::get('/register', [ExampleController::class, 'create'])->name('register-form');
+Route::post('/register', [ExampleController::class, 'store'])->name('register');
