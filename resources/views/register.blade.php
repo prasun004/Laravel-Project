@@ -19,11 +19,6 @@
 
 <body>
     {{-- @csrfto prevent page expired --}}
-    <div class="form-group container">
-        <div class="card">
-            <div class="card-head">
-                <h1>Registration Form</h1>
-            </div>
             <div class="card-body">
                 <form method="post"  class="form" action="{{route('register')}}" enctype="multipart/form-data" >
                     @csrf

@@ -26,3 +26,6 @@ Route::get('/', function () {
 
 Route::get('/register', [ExampleController::class, 'create'])->name('register-form');
 Route::post('/register', [ExampleController::class, 'store'])->name('register');
+
+
+Route::resource('registers', RegisterController::class);
