@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Register;
 use Illuminate\Http\Request;
 
 class RegisterController extends Controller
@@ -13,7 +14,8 @@ class RegisterController extends Controller
      */
     public function index()
     {
-        //
+        $demos = Register::latest()->get();
+        return view('index', compact('demos'));
     }
 
     /**
@@ -23,7 +25,7 @@ class RegisterController extends Controller
      */
     public function create()
     {
-        //
+        return view('register');
     }
 
     /**
@@ -34,7 +36,6 @@ class RegisterController extends Controller
      */
     public function store(Request $request)
     {
-        //
     }
 
     /**
@@ -45,7 +46,6 @@ class RegisterController extends Controller
      */
     public function show($id)
     {
-        //
     }
 
     /**

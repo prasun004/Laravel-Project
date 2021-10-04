@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ExampleController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +14,6 @@ use App\Http\Controllers\ExampleController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 // Route::get('/example/{first}/{second}',function ($first, $second) {
 // $multi = $first * $second;
@@ -24,8 +21,8 @@ Route::get('/', function () {
 // });
 
 
-Route::get('/register', [ExampleController::class, 'create'])->name('register-form');
-Route::post('/register', [ExampleController::class, 'store'])->name('register');
+// Route::get('/register', [ExampleController::class, 'create'])->name('register-form');
+// Route::post('/register', [ExampleController::class, 'store'])->name('register');
 
 
 Route::resource('registers', RegisterController::class);
